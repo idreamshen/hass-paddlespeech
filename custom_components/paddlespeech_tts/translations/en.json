@@ -1,0 +1,19 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Add text-to-speech engine",
+        "description": "Provide configuration data. See documentation for further info.",
+        "data": {
+          "url": "Enter the PaddleSpeech TTS endpoint."
+        }
+      }
+    },
+    "error": {
+      "already_configured": "This voice and endpoint are already configured."
+    },
+    "abort": {
+      "already_configured": "This voice and endpoint are already configured."
+    }
+  }
+}

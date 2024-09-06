@@ -1,0 +1,6 @@
+{
+    "name": "PaddleSpeech TTS",
+    "render_readme": true,
+    "zip_release": true,
+    "filename": "paddlespeech_tts.zip"
+}

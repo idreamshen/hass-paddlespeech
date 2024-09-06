@@ -1,0 +1,19 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "添加 TTS",
+        "description": "提供配置信息",
+        "data": {
+          "url": "请输入 PaddleSpeech TTS 地址"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "已经配置过了"
+    },
+    "abort": {
+      "already_configured": "已经配置过了"
+    }
+  }
+}
