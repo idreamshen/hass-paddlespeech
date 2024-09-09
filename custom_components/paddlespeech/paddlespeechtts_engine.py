@@ -15,4 +15,4 @@ class PaddleSpeechTTSEngine:
     @staticmethod
     def get_supported_langs() -> list:
         """Returns list of supported languages. Note: the model determines the provides language automatically."""
-        return ["af", "ar", "hy", "az", "be", "bs", "bg", "ca", "zh", "hr", "cs", "da", "nl", "en", "et", "fi", "fr", "gl", "de", "el", "he", "hi", "hu", "is", "id", "it", "ja", "kn", "kk", "ko", "lv", "lt", "mk", "ms", "mr", "mi", "ne", "no", "fa", "pl", "pt", "ro", "ru", "sr", "sk", "sl", "es", "sw", "sv", "tl", "ta", "th", "tr", "uk", "ur", "vi", "cy"]
+        return ["zh"]
