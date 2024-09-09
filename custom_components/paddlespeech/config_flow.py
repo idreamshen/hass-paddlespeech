@@ -15,7 +15,7 @@ _LOGGER = logging.getLogger(__name__)
 
 def generate_unique_id(user_input: dict) -> str:
     url = urlparse(user_input[CONF_URL])
-    return f"paddlespeech_tts_{url.hostname}"
+    return f"paddlespeech_{url.hostname}"
 
 async def validate_user_input(user_input: dict):
     if user_input.get(CONF_URL) is None:
@@ -38,7 +38,7 @@ class PaddleSpeechTTSConfigFlow(ConfigFlow, domain=DOMAIN):
                 await self.async_set_unique_id(unique_id)
                 self._abort_if_unique_id_configured()
                 hostname = urlparse(user_input[CONF_URL]).hostname
-                return self.async_create_entry(title=f"PaddleSpeech TTS ({hostname})", data=user_input)
+                return self.async_create_entry(title=f"PaddleSpeech ({hostname})", data=user_input)
             except data_entry_flow.AbortFlow:
                 return self.async_abort(reason="already_configured")
             except HomeAssistantError as e:

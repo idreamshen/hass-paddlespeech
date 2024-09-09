@@ -36,7 +36,7 @@ class PaddleSpeechTTSEntity(TextToSpeechEntity):
         self._config = config
 
         self._attr_unique_id = config.data.get(UNIQUE_ID)
-        self.entity_id = generate_entity_id("tts.paddlespeech_tts", "paddlespeech", hass=hass)
+        self.entity_id = generate_entity_id("tts.paddlespeech", "paddlespeech", hass=hass)
 
     @property
     def default_language(self):

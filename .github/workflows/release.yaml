@@ -12,14 +12,14 @@ jobs:
 
       - name: ZIP Component Dir
         run: |
-          cd ${{ github.workspace }}/custom_components/paddlespeech_tts
-          zip -r paddlespeech_tts.zip ./
+          cd ${{ github.workspace }}/custom_components/paddlespeech
+          zip -r paddlespeech.zip ./
 
       - name: Upload zip to release
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: ${{ github.workspace }}/custom_components/paddlespeech_tts/paddlespeech_tts.zip
-          asset_name: paddlespeech_tts.zip
+          file: ${{ github.workspace }}/custom_components/paddlespeech/paddlespeech.zip
+          asset_name: paddlespeech.zip
           tag: ${{ github.ref }}
           overwrite: true
