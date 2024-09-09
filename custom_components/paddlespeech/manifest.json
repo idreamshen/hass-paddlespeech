@@ -1,6 +1,6 @@
 {
     "domain": "paddlespeech",
-    "name": "Paddlespeech",
+    "name": "PaddleSpeech",
     "codeowners": [],
     "config_flow": true,
     "dependencies": [],
@@ -8,5 +8,5 @@
     "iot_class": "cloud_polling",
     "issue_tracker": "https://github.com/idreamshen/hass-paddlespeech/issues",
     "requirements": [],
-    "version": "1.1.0"
+    "version": "1.1.2"
   }
