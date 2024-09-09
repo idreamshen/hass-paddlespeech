@@ -11,6 +11,7 @@ from .const import CONF_URL, DOMAIN, UNIQUE_ID
 from .paddlespeechtts_engine import PaddleSpeechTTSEngine
 from homeassistant.exceptions import MaxLengthExceeded
 import base64
+from urllib.parse import urljoin
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -20,10 +21,9 @@ async def async_setup_entry(
     async_add_entities: AddEntitiesCallback,
 ) -> None:
     engine = PaddleSpeechTTSEngine(
-        config_entry.data[CONF_URL]
+        urljoin(config_entry.data[CONF_URL], "/paddlespeech/tts")
     )
     async_add_entities([PaddleSpeechTTSEntity(hass, config_entry, engine)])
-
 
 class PaddleSpeechTTSEntity(TextToSpeechEntity):
     _attr_has_entity_name = True
