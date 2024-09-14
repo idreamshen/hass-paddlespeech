@@ -59,7 +59,7 @@ class PaddleSpeechTTSEntity(TextToSpeechEntity):
     @property
     def name(self):
         """Return name of entity"""
-        return f"TTS"
+        return f"PaddleSpeech TTS"
 
     def get_tts_audio(self, message, language, options=None):
         """Convert a given text to speech and return it as bytes."""
